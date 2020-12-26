@@ -11,9 +11,21 @@
  * Execute: Use `node lessons/simple.js` to run the test.
  */
 
-const {sum, subtract} = require('../math')
+const { sum, subtract } = require("../math");
 
-let result, expected
+let result, expected;
+
+result = sum(5, 10);
+expected = 15;
+if (result !== expected) {
+	throw new Error(`${result} is not equal to ${expected}`);
+}
+
+result = subtract(10, 5);
+expected = 5;
+if (result !== expected) {
+	throw new Error(`${result} is not equal to ${expected}`);
+}
 
 /**
  * Hint: there's no magic, just the most straightforward conditional statement.
